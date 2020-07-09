@@ -44,4 +44,6 @@ Estimated execution plan indicates optimizer view.
 Actual execution plan indicates what executed the query and how was it done.
 Execution plans are stored in memory called plan cache, hence can be reused. Each plan is stored once unless optimizer decides parallelism for the execution of the query.
 There are three different formats of execution plans available in SQL Server - Graphical plans, Text plans, and XML plans.
-SHOWPLAN is the permission which is required for the user who wants to see the execution pla
+SHOWPLAN is the permission which is required for the user who wants to see the execution plan
+
+https://www.tutorialspoint.com/ms_sql_server/ms_sql_server_quick_guide.htm
