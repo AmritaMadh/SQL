@@ -1,0 +1,21 @@
+- Schema 
+  SQL Server uses schemas to logically groups tables and other database objects. 
+  In our sample database, we have two schemas: sales and production. The sales schema groups all the sales related tables while the production schema groups all the production 
+  related tables.
+  
+- Should not use the SELECT * for real production code due to the following main reasons:
+  * First, SELECT * often retrieves more data than your application needs to function. It causes unnecessary data to transfer from the SQL Server to the client application, 
+    taking more time for data to travel across the network and slowing down the application.
+  
+  * Second, if the table is added one or more new columns, the SELECT * just retrieves all columns that include the newly added columns which were not intended for use in 
+    the application. This could make the application crash.
+    
+- Groups 
+  To group rows into groups, use the GROUP BY clause. For example, the following statement returns all the cites of customers located in California and the number of customers in each city.
+
+- Having 
+  To filter groups based on one or more conditions, you use the HAVING clause.
+  
+- Notice that the WHERE clause filters rows while the HAVING clause filter groups.
+  Sequence 
+  FROM ->  WHERE -> GROUP BY -> HAVING -> SELECT -> ORDER BY
