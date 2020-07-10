@@ -19,3 +19,4 @@
 - Notice that the WHERE clause filters rows while the HAVING clause filter groups.
   Sequence 
   FROM ->  WHERE -> GROUP BY -> HAVING -> SELECT -> ORDER BY
+  
