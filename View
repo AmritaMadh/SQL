@@ -1,0 +1,28 @@
+A view is a named/ stored sql query, stored in the database catalog that allows you to refer to it later.
+By definition, views do not store data except for indexed views.
+A view may consist of columns from multiple tables using joins or just a subset of columns of a single table. This makes views useful for abstracting or hiding complex queries.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Advantages of views
+Generally speaking, views provide the following advantages:
+
+Security:
+You can restrict users to access directly to a table and allow them to access a subset of data via views.
+For example, you can allow users to access customer name, phone, email via a view but restrict them to access the bank account and other sensitive information.
+
+Simplicity:
+A relational database may have many tables with complex relationships e.g., one-to-one and one-to-many that make it difficult to navigate.
+However, you can simplify the complex queries with joins and conditions using a set of views.
+
+Consistency:
+Sometimes, you need to write a complex formula or logic in every query.
+To make it consistent, you can hide the complex queries logic and calculations in views.
+Once views are defined, you can reference the logic from the views rather than rewriting it in separate queries.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Unlike regular views, indexed views are materialized views that stores data physically like a table hence may provide some the performance benefit if they are used appropriately.
+CREATE VIEW product_master
+WITH SCHEMABINDING
+AS 
+SELECT
+from
